@@ -1,25 +1,29 @@
-Setup responder and listen without poisoning.
+# Rough Process
 
-Watch the traffic flows.
+- Setup responder and listen without poisoning.
 
-Locate the Domain Controller.
+- Watch the traffic flows.
 
-Setup ntlmrelayx for a target that is valuable.
+- Locate the Domain Controller.
 
-Once a shell is obtained, start AD enum.
+- Setup ntlmrelayx for a target that is valuable.
 
-Invoke-SharpHound in memory from the remote attacking host. (avoiding disk until absolutely necessary, can also send BloodHound files to remote source)
+- Once a shell is obtained, start AD enum.
 
-PowerView in memory from the remote attacking host. (avoiding disk until absolutely necessary)
+- Invoke-SharpHound in memory from the remote attacking host. (avoiding disk until absolutely necessary, can also send BloodHound files to remote source)
 
-PowerView Invoke-Kerberoast
+- PowerView in memory from the remote attacking host. (avoiding disk until absolutely necessary)
 
-PowerView Invoke-ASREPRoast (Users with Pre-auth not required)
+- PowerView Invoke-Kerberoast
 
-Start cracking hashes from Kerberoast and ASREPRoast. (See password cracking materials)
+- PowerView Invoke-ASREPRoast (Users with Pre-auth not required)
 
-Import data into BloodHound.
+- Start cracking hashes from Kerberoast and ASREPRoast. (See password cracking materials)
+
+- Import data into BloodHound.
   
   1. Look for "Reachable High Value Targets"
   2. Look for Domain Admins and sessions
   3. Look for local admin count on any compromised users.
+  
+**Back to [main page](README.md)**
